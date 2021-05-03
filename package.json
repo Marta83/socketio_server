@@ -1,0 +1,29 @@
+{
+  "name": "socketio_server",
+  "version": "1.0.0",
+  "description": "SocketIO Server for Arduino",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon --watch index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Marta83/socketio_server.git"
+  },
+  "author": "Xing",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Marta83/socketio_server/issues"
+  },
+  "homepage": "https://github.com/Marta83/socketio_server#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^4.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7",
+    "socket.io-client": "^4.0.1"
+  }
+}
