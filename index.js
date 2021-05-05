@@ -10,6 +10,10 @@ io.on('connection', (socket) => {
     console.log(`Input ${msg}`);
     socket.broadcast.emit('output', msg);
   });
+
+  socket.onAny((event, payload) => {
+    console.log("event: ", event, "payload: ", payload);
+  });
 });
 
 server.listen(port, () => {
