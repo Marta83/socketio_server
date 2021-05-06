@@ -10,8 +10,8 @@ io.on('connection', (socket) => {
     socket.broadcast.emit('message', msg);
   });
 
-  socket.on('typing', () => {
-    socket.broadcast.emit('wait_for_message');
+  socket.on('typing', (name_of_sender) => {
+    socket.broadcast.emit('wait_for_message', name_of_sender);
   });
 
   socket.onAny((event, payload) => {
