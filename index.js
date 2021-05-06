@@ -6,9 +6,12 @@ const port = process.env.PORT || 3000;
 
 io.on('connection', (socket) => {
   console.log('New connection');
-  socket.on('input', (msg) => {
-    console.log(`Input ${msg}`);
-    socket.broadcast.emit('output', msg);
+  socket.on('message', (msg) => {
+    socket.broadcast.emit('message', msg);
+  });
+
+  socket.on('typing', () => {
+    socket.broadcast.emit('wait_for_message');
   });
 
   socket.onAny((event, payload) => {
